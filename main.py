@@ -10,7 +10,7 @@ data_path = './data'
 output_path = './output'
 context_count_per_user = 11
 user_count_per_context = 3
-secret_code = 'example_'
+secret_code = 'domain_'
 
 
 def init_paths():
