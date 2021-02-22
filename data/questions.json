@@ -1,0 +1,22 @@
+[
+    {
+        "id": "domain",
+        "text": "Click the following URL and choose its category. Refer to the example pages if necessary.",
+        "option": {
+            "0": "Mainstream news",
+            "1": "Journal",
+            "2": "Report",
+            "3": "Personal Blog",
+            "4": "Magazine-psychology",
+            "5": "Magazine-society",
+            "6": "Magazine-finance",
+            "7": "Magazine-culture",
+            "8": "Magazine-scitech",
+            "9": "Magazine-general",
+            "10": "Knowledge archives",
+            "11": "Q&A",
+            "12": "Forum",
+            "13": "Broken"
+        }
+    }
+]
