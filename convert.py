@@ -12,6 +12,12 @@ def load_jsonl(filename):
     return data
 
 def get_domain(data):
+    csv_data = []
+    with open('./data/domain-4.csv', 'r', encoding='UTF-8') as f:
+        reader = csv.reader(f)
+        next(reader, None)
+        for row in reader:
+            csv_data.append(row[0])
     cnt = 1
     for row in data:
         book = {
@@ -19,14 +25,15 @@ def get_domain(data):
             'count': row['count'],
             'urls': row['urls']
         }
-        with open('./data/contexts/%04d-%s-%s.json' % (cnt, book['netloc'], book['count']), 'w') as f:
-            json.dump(book, f, sort_keys=True, indent=4)
+        if book['netloc'] in csv_data:
+            with open('./data/contexts/%04d-%s-%s.json' % (cnt, book['netloc'], book['count']), 'w') as f:
+                json.dump(book, f, sort_keys=True, indent=4)
         cnt += 1
 
 def conv(filename):
     if not os.path.exists('./data/contexts'):
         os.makedirs('./data/contexts')
-    get_domain(load_jsonl(filename))
+    get_domain((load_jsonl(filename)))
 
 def main():
     conv('evidence_domain-annot')
