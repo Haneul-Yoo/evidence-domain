@@ -84,7 +84,8 @@ def draw_context_ids(wid):
         if len(draw_box) == 0:
             break
         # context_ids.append(draw_box[0])
-        context_ids.append(random.choice(draw_box[0:49]))
+        # context_ids.append(random.choice(draw_box[0:49]))
+        context_ids.append(random.choice(draw_box))
     return context_ids
 
 

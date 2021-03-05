@@ -13,7 +13,7 @@ def load_jsonl(filename):
 
 def get_domain(data):
     csv_data = []
-    with open('./data/domain-4.csv', 'r', encoding='UTF-8') as f:
+    with open('./data/domain-5.csv', 'r', encoding='UTF-8') as f:
         reader = csv.reader(f)
         next(reader, None)
         for row in reader:
